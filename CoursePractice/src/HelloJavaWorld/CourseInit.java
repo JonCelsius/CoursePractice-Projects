@@ -10,7 +10,10 @@ public class CourseInit {
         packageOneMethod.printFromPackageOne();
         AnotherPackageMethod anotherPackageMethod=new AnotherPackageMethod();
         anotherPackageMethod.printFromSecondPackage();
-        
+      /*  float i=10.0f;
+        long f= i;
+        System.out.println(i);
+        System.out.println(f);*/
     }
 
 }
