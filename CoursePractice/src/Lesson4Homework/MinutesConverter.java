@@ -13,13 +13,13 @@ public class MinutesConverter {
         while (i <= cycleNumber) {
             System.out.println("Introduceti numarul de minute: ");
             minutes = minObject.nextLong();
-            days=(float)minutes/1440;
-            years=(float)minutes/(365*1440);
-            System.out.println("Numarul de zile este egal cu " + String.format("%.2f",days) + "\nIar numarul de ani este egal cu "+
-                    String.format("%.8f",years));
+            days = (float) minutes / 1440;
+            years = (float) minutes / (365 * 1440);
+            System.out.println("Numarul de zile este egal cu " + String.format("%.2f", days) + "\nIar numarul de ani este egal cu " +
+                    String.format("%.8f", years));
             i++;
         }
-
+        minObject.close();
 
     }
 }

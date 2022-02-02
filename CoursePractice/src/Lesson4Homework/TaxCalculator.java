@@ -14,6 +14,7 @@ public class TaxCalculator {
             System.out.println("Ai introdus gresit valoare! Mai incearca! \n\n\n" +
                     "Daca doresti sa introduci manual valorile introdu 1 !\n Daca doresti sa fie utilizate valorile implicite introdu 2 !");
             k = myObject.nextInt();
+
         }
         switch (k) {
             case 1:
@@ -23,6 +24,7 @@ public class TaxCalculator {
                 tax = myObject.nextDouble();
                 System.out.println("Introduceti cantitatea: ");
                 quantity = myObject.nextInt();
+                myObject.close();
                 break;
 
 
