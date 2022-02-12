@@ -10,6 +10,7 @@ public class ReverseIntPrint {
         readValue = new Scanner(System.in);
         positiveInteger = initializeAndValidateTheValue();
         printReverseInt(positiveInteger);
+        readValue.close();
 
     }
 

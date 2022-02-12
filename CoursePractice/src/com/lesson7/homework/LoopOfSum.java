@@ -15,6 +15,7 @@ public class LoopOfSum {
             System.out.print("The sum of numbers you just entered is: " + firsNumber + " + " + secondNumber + " = " + sum);
 
         } while (askToLoopAgain());
+        readValue.close();
     }
 
     public static double sumOfTwoNumbers(double num1, double num2) {
