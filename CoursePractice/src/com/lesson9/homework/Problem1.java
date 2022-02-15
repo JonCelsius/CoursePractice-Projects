@@ -26,5 +26,6 @@ public class Problem1 {
         System.out.println("The rectangle dimensions are the following! \n" + myRectangle.toString());
         area = myRectangle.getArea(width, length);
         System.out.println("The are of the rectangle is :" + String.format(("%.3f"), area));
+
     }
 }
