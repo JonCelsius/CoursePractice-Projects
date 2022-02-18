@@ -2,7 +2,7 @@ package com.lesson9.homework;
 
 import java.util.Scanner;
 
-public class Problem3 {
+class Problem3 {
     public static void countAChar() {
         String enteredString;
         char characterToFind;

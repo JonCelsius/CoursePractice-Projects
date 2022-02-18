@@ -1,7 +1,6 @@
 package com.lesson9.homework;
 
-
-public class Employee {
+class Employee {
     private String name;
     private int yearOfJoining;
     private double salary;

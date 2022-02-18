@@ -6,7 +6,7 @@ import com.lesson.util.ValidationClass;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Problem2 {
+class Problem2 {
     public static void printEmployeeList() {
         String name, address;
         int yearOfJoining;

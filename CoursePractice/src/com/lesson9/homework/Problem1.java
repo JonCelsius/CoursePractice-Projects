@@ -4,7 +4,7 @@ import com.lesson.util.ValidationClass;
 
 import java.util.Scanner;
 
-public class Problem1 {
+class Problem1 {
     public static void calculateRectangleArea(){
         double width, length, area;
         RectangleArea myRectangle = new RectangleArea();

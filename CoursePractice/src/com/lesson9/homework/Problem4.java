@@ -2,7 +2,7 @@ package com.lesson9.homework;
 
 import java.util.Scanner;
 
-public class Problem4 {
+class Problem4 {
     static Scanner readPin;
 
     public static void pinLogInTimeOut() {

@@ -1,6 +1,6 @@
 package com.lesson9.homework;
 
-public class RectangleArea {
+class RectangleArea {
     private double width, length;
 
     void setWidth(double width) {

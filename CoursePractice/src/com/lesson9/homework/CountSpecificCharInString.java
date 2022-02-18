@@ -1,7 +1,7 @@
 package com.lesson9.homework;
 
 
-public class CountSpecificCharInString {
+class CountSpecificCharInString {
 
     public static void countString(String enteredString, char characterToFind) {
         int count = 0;
