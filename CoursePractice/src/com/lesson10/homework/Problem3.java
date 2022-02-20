@@ -1,6 +1,6 @@
 package com.lesson10.homework;
 
-public class Problem3 {
+class Problem3 {
     public static void createWrapper() {
         Boolean booleanObj = Boolean.valueOf("tRue");
         Byte byteObj = 120;

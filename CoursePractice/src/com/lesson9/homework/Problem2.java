@@ -1,9 +1,7 @@
 package com.lesson9.homework;
 
 import com.lesson.util.ArrayUtilities;
-import com.lesson.util.ValidationClass;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 class Problem2 {

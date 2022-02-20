@@ -2,7 +2,7 @@ package com.lesson10.homework;
 
 import java.util.Scanner;
 
-public class Problem2 {
+class Problem2 {
 
     static Scanner scanner = new Scanner(System.in);
 

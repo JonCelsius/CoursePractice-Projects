@@ -1,6 +1,6 @@
 package com.lesson10.homework;
 
-public enum WeekDay {
+enum WeekDay {
     MONDAY,
     TUESDAY,
     WEDNESDAY,
