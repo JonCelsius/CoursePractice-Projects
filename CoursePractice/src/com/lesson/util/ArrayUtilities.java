@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class ArrayUtilities {
 
-
+    /**
+     * The method reads and print all the elements of an integer type array with one dimension.
+     * @param yourArr - one dimension integer array
+     */
     public static void printOneDimensionArray(int[] yourArr) {
 
         System.out.println("\n===========================");
@@ -17,6 +20,10 @@ public class ArrayUtilities {
         System.out.println();
     }
 
+    /**
+     * The method reads and print all the elements of a string type array with one dimension.
+     * @param yourArr - one dimension String type array
+     */
     public static void printOneDimensionStringArray(String[] yourArr) {
 
         System.out.println("\n===========================");
@@ -28,6 +35,12 @@ public class ArrayUtilities {
         System.out.println();
     }
 
+    /**
+     * The method reads and print all the elements of a string type array with two dimensions.
+     * @param yourArr -  - two dimensions integer array
+     * @param arrRow - number of rows
+     * @param arrColumn - number of columns
+     */
     public static void printTwoDimensionArray(int[][] yourArr, int arrRow, int arrColumn) {
 
         System.out.println("\n===========================");
@@ -43,6 +56,13 @@ public class ArrayUtilities {
 
     }
 
+    /**
+     * The checkInput method reads a value and verifies if its an integer or not, it calls the readIntValue method that
+     * uses hasNextInt() utility to validate the input, otherwise it throws an exception which leads to prompting user
+     * to enter the value again.
+     * @param readValue - scanner oject
+     * @return input - a valid integer
+     */
     public static int checkInput(Scanner readValue) {
         int input = 0;
         try {
@@ -61,6 +81,11 @@ public class ArrayUtilities {
 
     }
 
+    /**
+     * This method is a part of a validation process of an integer value that uses hasNextInt() method.
+     * @param readValue - scanner object
+     * @return readValue.nextInt() or checkInput(readValue)
+     */
     public static int readIntValue(Scanner readValue) {
         if (readValue.hasNextInt()) {
             return readValue.nextInt();
@@ -71,7 +96,12 @@ public class ArrayUtilities {
         }
     }
 
-    public static long sumOfElementsArr(int[] oneDimArr) {
+    /**
+     * Reads a one dimension integer array and calculates the sum of its elements.
+     * @param oneDimArr - one dimension integer array
+     * @return sum
+     */
+    public static long getSumOfElementsArr(int[] oneDimArr) {
         long sum = 0;
         for (int value : oneDimArr) {
             sum += value;
@@ -79,11 +109,21 @@ public class ArrayUtilities {
         return sum;
     }
 
-    public static double averageValueArr(int[] oneDimArr) {
-        return (double) sumOfElementsArr(oneDimArr) / oneDimArr.length;
+    /**
+     * Calculates the average value of a one dimension integer array elements.
+     * @param oneDimArr - one dimension integer array
+     * @return sumOfElementsArr
+     */
+    public static double getAverageValueArr(int[] oneDimArr) {
+        return (double) getSumOfElementsArr(oneDimArr) / oneDimArr.length;
     }
 
-    public static int numberOfEvenArr(int[] oneDimArr) {
+    /**
+     * Reads a one dimension integer array and calculates the number of even integers in the array.
+     * @param oneDimArr - one dimension integer array
+     * @return even - number of even elements.
+     */
+    public static int getNumberOfEvenArr(int[] oneDimArr) {
         int even = 0;
         for (int value : oneDimArr) {
             if (value % 2 == 0) {
@@ -93,7 +133,12 @@ public class ArrayUtilities {
         return even;
     }
 
-    public static int numberOfOddArr(int[] oneDimArr) {
+    /**
+     * Reads a one dimension integer array and calculates the number of odd integers in the array.
+     * @param oneDimArr - one dimension integer array
+     * @return odd - number of odd elements.
+     */
+    public static int getNumberOfOddArr(int[] oneDimArr) {
         int odd = 0;
         for (int value : oneDimArr) {
             if (value % 2 != 0) {
@@ -101,15 +146,24 @@ public class ArrayUtilities {
             }
         }
         return odd;
-
-
     }
 
+    /**
+     * The method uses Math.random() to randomly give a number between minim value and maxim value and returns it.
+     * @param min - minimum value
+     * @param max - maximum value
+     * @return an integer number
+     */
     public static int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static long maximumValueOfArr(int[] oneDimArr) {
+    /**
+     * Reads a one dimension integer array and returns the maximum value.
+     * @param oneDimArr - one dimension integer array
+     * @return max - maximum value of all elements
+     */
+    public static long getMaximumValueOfArr(int[] oneDimArr) {
         int max = oneDimArr[0];
         for (int value : oneDimArr) {
             if (value > max) {
@@ -119,7 +173,12 @@ public class ArrayUtilities {
         return max;
     }
 
-    public static long minimValueOfArr(int[] oneDimArr) {
+    /**
+     * Reads a one dimension integer array and returns the minimum value.
+     * @param oneDimArr - one dimension integer array
+     * @return min - minimum value of all elements
+     */
+    public static long getMinimValueOfArr(int[] oneDimArr) {
         int min = oneDimArr[0];
         for (int value : oneDimArr) {
             if (value < min) {
@@ -129,6 +188,11 @@ public class ArrayUtilities {
         return min;
     }
 
+    /**
+     * Generating a one dimension String type array with the help of a random value utility getRandomNumber()
+     * @param n - length of the array
+     * @return myStringArr - the String type array
+     */
     public static String[] arrInitString(int n) {
         String[] myStringArr;
         myStringArr = new String[n];
@@ -137,6 +201,12 @@ public class ArrayUtilities {
         }
         return myStringArr;
     }
+
+    /**
+     * The method copies a String type array elements into another String type array.
+     * @param fromStrArr - String type array to copy
+     * @param toStrArr - the copied String type array
+     */
     public static void copyStringArr ( String[] fromStrArr, String[] toStrArr){
         for (int i=0; i<fromStrArr.length;i++){
              toStrArr[i] = fromStrArr[i];

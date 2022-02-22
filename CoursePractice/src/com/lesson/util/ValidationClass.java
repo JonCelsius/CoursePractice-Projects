@@ -1,6 +1,6 @@
 package com.lesson.util;
 
-import org.jetbrains.annotations.NotNull;
+
 
 public class ValidationClass {
 
@@ -8,12 +8,12 @@ public class ValidationClass {
         return input > 0;
     }
 
-    public static boolean isValidNameString(@NotNull String input) {
+    public static boolean isValidNameString( String input) {
         String regex = "^[a-zA-Z ]+$";
         return input.matches(regex);
     }
 
-    public static boolean isValidAddressString(@NotNull String input) {
+    public static boolean isValidAddressString( String input) {
         String regex = "^[a-zA-Z0-9._]+$";
         return input.matches(regex);
     }

@@ -16,8 +16,8 @@ public class FindMinMaxValuesOfArray {
             anArray[i] = ArrayUtilities.getRandomNumber(100, 1);
         }
         ArrayUtilities.printOneDimensionArray(anArray);
-        System.out.print("\nThe maximum value is: " + ArrayUtilities.maximumValueOfArr(anArray));
-        System.out.print("\nThe minimum value is: " + ArrayUtilities.minimValueOfArr(anArray));
+        System.out.print("\nThe maximum value is: " + ArrayUtilities.getMaximumValueOfArr(anArray));
+        System.out.print("\nThe minimum value is: " + ArrayUtilities.getMinimValueOfArr(anArray));
         readValue.close();
     }
 }

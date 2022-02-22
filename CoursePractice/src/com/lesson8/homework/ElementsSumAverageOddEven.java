@@ -32,25 +32,25 @@ public class ElementsSumAverageOddEven {
         }
         System.out.println("The values of the one dimension array are! ");
         ArrayUtilities.printOneDimensionArray(oneDimensionArr);
-        System.out.println("The sum of the values of the one dimension array is: " + ArrayUtilities.sumOfElementsArr(oneDimensionArr));
-        System.out.println("The average value of one dimension array's elements is: " + ArrayUtilities.averageValueArr(oneDimensionArr));
-        System.out.println("The number of even values of one dimension array is: " + ArrayUtilities.numberOfEvenArr(oneDimensionArr));
-        System.out.println("The number of odd values of one dimension array is: " + ArrayUtilities.numberOfOddArr(oneDimensionArr));
+        System.out.println("The sum of the values of the one dimension array is: " + ArrayUtilities.getSumOfElementsArr(oneDimensionArr));
+        System.out.println("The average value of one dimension array's elements is: " + ArrayUtilities.getAverageValueArr(oneDimensionArr));
+        System.out.println("The number of even values of one dimension array is: " + ArrayUtilities.getNumberOfEvenArr(oneDimensionArr));
+        System.out.println("The number of odd values of one dimension array is: " + ArrayUtilities.getNumberOfOddArr(oneDimensionArr));
 
         System.out.println("The values of the two dimension array are! ");
         ArrayUtilities.printTwoDimensionArray(twoDimensionArr, twoDimRow, twoDimCol);
 
         for (int j = 0; j < twoDimRow; j++) {
-            sumTwoDimArr += ArrayUtilities.sumOfElementsArr(twoDimensionArr[j]);
+            sumTwoDimArr += ArrayUtilities.getSumOfElementsArr(twoDimensionArr[j]);
         }
         System.out.println("\n\nThe sum of the values of the one dimension array is: " + sumTwoDimArr);
         System.out.println("The average value of one dimension array's elements is: " + (double) sumTwoDimArr / (twoDimCol * twoDimRow));
         for (int j = 0; j < twoDimRow; j++) {
-            numberEvenTwoDimArr += ArrayUtilities.numberOfEvenArr(twoDimensionArr[j]);
+            numberEvenTwoDimArr += ArrayUtilities.getNumberOfEvenArr(twoDimensionArr[j]);
         }
         System.out.println("The number of even values of one dimension array is: " + numberEvenTwoDimArr);
         for (int j = 0; j < twoDimRow; j++) {
-            numberOddTwoDimArr += ArrayUtilities.numberOfOddArr(twoDimensionArr[j]);
+            numberOddTwoDimArr += ArrayUtilities.getNumberOfOddArr(twoDimensionArr[j]);
         }
         System.out.println("The number of odd values of one dimension array is: " + numberOddTwoDimArr);
 
