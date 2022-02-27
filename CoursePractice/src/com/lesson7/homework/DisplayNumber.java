@@ -30,6 +30,9 @@ public class DisplayNumber {
         readValue.close();
     }
 
+    /**
+     * Checking if a long value is greater than the other and loops until its satisfied.
+     */
     public static void inputMaximumAndValidNumber() {
         System.out.print("\nInput the maximum value to end: ");
         maximValue = readValue.nextLong();

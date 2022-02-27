@@ -18,10 +18,20 @@ public class LoopOfSum {
         readValue.close();
     }
 
+    /**
+     * Calculates the sum of two double numbers
+     * @param num1
+     * @param num2
+     * @return num1+num2
+     */
     public static double sumOfTwoNumbers(double num1, double num2) {
         return (num1 + num2);
     }
 
+    /**
+     * Prompts the user to enter a value
+     * @return user's input
+     */
     public static double initializeTheValue() {
         System.out.print("\nEnter the value: ");
         return (readValue.nextDouble());
