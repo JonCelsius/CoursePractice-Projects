@@ -6,25 +6,15 @@ public class Invoice {
     private int qtyOfProductsPurchased;
     private double priceForProduct;
 
-    public Invoice(){
+    public Invoice() {
 
     }
 
     public Invoice(String deviceModel, String productDescription, int qtyOfProductsPurchased, double priceForProduct) {
         this.deviceModel = deviceModel;
         this.productDescription = productDescription;
-        if (qtyOfProductsPurchased > 0) {
-            this.qtyOfProductsPurchased = qtyOfProductsPurchased;
-        } else {
-            this.qtyOfProductsPurchased = 0;
-
-        }
-        if (priceForProduct > 0) {
-            this.priceForProduct = priceForProduct;
-        } else {
-            this.priceForProduct = 0.0;
-
-        }
+        this.qtyOfProductsPurchased = checkValue(qtyOfProductsPurchased);
+        this.priceForProduct = checkValue(priceForProduct);
 
     }
 
@@ -49,12 +39,7 @@ public class Invoice {
     }
 
     public void setQtyOfProductsPurchased(int qtyOfProductsPurchased) {
-        if (qtyOfProductsPurchased > 0) {
-            this.qtyOfProductsPurchased = qtyOfProductsPurchased;
-        } else {
-            this.qtyOfProductsPurchased = 0;
-
-        }
+        this.qtyOfProductsPurchased = checkValue(qtyOfProductsPurchased);
     }
 
     public double getPriceForProduct() {
@@ -62,16 +47,21 @@ public class Invoice {
     }
 
     public void setPriceForProduct(double priceForProduct) {
-        if (priceForProduct > 0) {
-            this.priceForProduct = priceForProduct;
-        } else {
-            this.priceForProduct = 0.0;
-
-        }
+        this.priceForProduct = checkValue(priceForProduct);
     }
-    public double getAmount (){
+
+    public int checkValue(int value) {
+        return value > 0 ? value : 0;
+    }
+
+    //Overloaded
+    public double checkValue(double value) {
+        return value > 0 ? value : 0.0;
+    }
+
+    public double getAmount() {
         double amount;
-        amount=qtyOfProductsPurchased*priceForProduct;
+        amount = qtyOfProductsPurchased * priceForProduct;
         return amount;
     }
 

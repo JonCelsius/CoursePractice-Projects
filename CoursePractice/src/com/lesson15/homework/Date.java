@@ -19,7 +19,7 @@ public class Date {
 
     public void setMonth(int month) {
         if (month > 0 && month <= 12) {
-            this.month = day;
+            this.month = month;
         } else {
             this.month = 0;
         }
