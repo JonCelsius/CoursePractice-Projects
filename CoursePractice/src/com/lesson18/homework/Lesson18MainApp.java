@@ -5,6 +5,7 @@ import com.lesson17.homework.ValidationInput;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Lesson18MainApp {
     public static void main(String[] args) {
@@ -35,7 +36,7 @@ public class Lesson18MainApp {
 
                     break;
                 case 3:
-                    HashMap<String,String> enRoDictionary = EnRoDictionary.enRoDictionaryInit();
+                    Map<String,String> enRoDictionary = EnRoDictionary.enRoDictionaryInit();
                     EnRoDictionary.printEnRoDictionary(enRoDictionary);
 
                     break;

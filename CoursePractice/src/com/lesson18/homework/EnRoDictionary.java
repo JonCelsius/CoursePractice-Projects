@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class EnRoDictionary {
 
-    public static HashMap<String, String> enRoDictionaryInit() {
-        HashMap<String, String> enRoDictionary = new HashMap<>();
+    public static Map<String, String> enRoDictionaryInit() {
+        Map<String, String> enRoDictionary = new HashMap<>();
         ValidationInput validationInput = new ValidationInput();
         int numberOfWords;
         System.out.print("Enter the number of words in the dictionary: ");
@@ -21,11 +21,17 @@ public class EnRoDictionary {
         return enRoDictionary;
     }
 
-    public static void printEnRoDictionary(HashMap<String, String> enRoDictionary) {
+    public static void printEnRoDictionary(Map<String, String> enRoDictionary) {
         System.out.println("-------------------------------------------------------------------------------");
         System.out.println("----------------------English-Romanian Dictionary------------------------------");
-        for (Map.Entry value : enRoDictionary.entrySet()) {
+        for (Map.Entry<String,String> value : enRoDictionary.entrySet()) {
+            System.out.println(value.toString());
+            System.out.println();
             System.out.println(value.getKey() + " - " + value.getValue());
+        }
+        for(String s:enRoDictionary.keySet()){
+            System.out.println();
+            System.out.println(enRoDictionary.get(s));
         }
         System.out.println("-------------------------------------------------------------------------------");
     }

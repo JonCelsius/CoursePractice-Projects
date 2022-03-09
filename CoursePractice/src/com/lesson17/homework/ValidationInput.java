@@ -1,5 +1,6 @@
 package com.lesson17.homework;
 
+import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,9 +10,25 @@ public class ValidationInput {
     public ValidationInput() {
         scanner = new Scanner(System.in);
     }
+
     public String inputString() {
         return scanner.nextLine();
     }
+
+    public String checkDate() {
+        String regex = "^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$";
+        String date;
+        while (true) {
+            date = scanner.nextLine();
+            if (date.matches(regex)) {
+                break;
+            } else {
+                System.out.println("Enter again!");
+            }
+        }
+        return date;
+    }
+
     public void closeScanner() {
         this.scanner.close();
     }
@@ -37,6 +54,7 @@ public class ValidationInput {
 
     /**
      * This method is a part of a validation process of an integer value that uses hasNextInt() method.
+     *
      * @return readValue.nextInt() or checkInput(readValue)
      */
     public int readIntValue() {
@@ -47,5 +65,19 @@ public class ValidationInput {
             scanner.next();
             return checkIntInput();
         }
+    }
+
+    public String checkTime() {
+        String regex = "^(?:(?:([01]?\\d|2[0-3]):)?([0-5]?\\d):)?([0-5]?\\d)$";
+        String time;
+        while (true) {
+            time = scanner.nextLine();
+            if (time.matches(regex)) {
+                break;
+            } else {
+                System.out.println("Enter again!");
+            }
+        }
+        return time;
     }
 }
