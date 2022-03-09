@@ -24,6 +24,7 @@ public class ValidationInput {
                 System.out.print("\nEntered number is not valid, please enter an integer positive number!:  ");
                 input = readIntValue();
             }
+            scanner.nextLine();
             return input;
 
         } catch (InputMismatchException inputMismatchException) {
